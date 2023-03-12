@@ -1,0 +1,31 @@
+int solution(const char* s) {
+    int i;
+    int j;
+    int split;
+    int x_num;
+    int not_x_num;
+    
+    i = 1;
+    j = 0;
+    split = 0;
+    x_num = 1;
+    not_x_num = 0;
+    while (s[i])
+    {
+        if (s[j] == s[i])
+            x_num++;
+        else
+            not_x_num++;
+        if (x_num == not_x_num)
+        {
+            split++;
+            x_num = 0;
+            not_x_num = 0;
+            j = i + 1;
+        }
+        i++;
+    }
+    if (x_num != not_x_num)
+       split++;
+    return (split);
+}
