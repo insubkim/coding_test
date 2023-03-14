@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+// wallpaper_len은 배열 wallpaper의 길이입니다.
+// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
+int* solution(const char* wallpaper[], size_t wallpaper_len) {
+    // return 값은 malloc 등 동적 할당을 사용해주세요. 할당 길이는 상황에 맞게 변경해주세요.
+    int* answer = (int*)malloc(1);
+    return answer;
+}
+/*
+1 ≤ wallpaper의 길이 ≤ 50
+1 ≤ wallpaper[i]의 길이 ≤ 50
+wallpaper의 모든 원소의 길이는 동일합니다.
+wallpaper[i][j]는 바탕화면에서 i + 1행 j + 1열에 해당하는 칸의 상태를 나타냅니다.
+wallpaper[i][j]는 "#" 또는 "."의 값만 가집니다.
+바탕화면에는 적어도 하나의 파일이 있습니다.
+드래그 시작점 (lux, luy)와 끝점 (rdx, rdy)는 lux < rdx, luy < rdy를 만족해야 합니다.
+*/
